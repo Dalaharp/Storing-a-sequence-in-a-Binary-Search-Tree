@@ -12,8 +12,6 @@ Please fill in the details of the new insert function. Since it now operates bas
 Goal Two: Maintaining Balance While Inserting Based on Rank
 Just like last week, our insert function does nothing to maintain balance, and could result in a very imbalanced (and therefore slow) BST. To fix this, last week we also built a more sophisticated version of insert based on a randomized balancing mechanism: when inserting the nth element into a BST, it inserted that element at the root with probability 1/n, and otherwise recursively just as before. Insertion at the root was done by first splitting the tree.
 
-Your task now is to build a version of insertion by rank that uses the same randomized balancing mechanism as before. With probability 1/n (n being the new size of the tree after the insert), you should insert at the root, and otherwise you should insert recursively just as before. This will work much like your original insert_random function from the previous lab. To insert at the root, however, you will need to modify the split function so it splits on rank, rather than on value. As before, please think carefully about the recursive structure of your function, and don’t be afraid to draw pictures!
-
 Goal Three: Putting Everything Together to Solve a Fun Example Problem
 Suppose n football teams, numbered 0 ... n − 1, all play each-other in a large tournament, where there are no ties. In your source file, you will find a function called
 
